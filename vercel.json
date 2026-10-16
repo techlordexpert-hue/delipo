@@ -1,3 +1,22 @@
 {
-  "outputDirectory": "public"
+  "version": 2,
+  "builds": [
+    { "src": "db.js", "use": "@vercel/node" },
+    { "src": "health.js", "use": "@vercel/node" },
+    { "src": "paystack-init.js", "use": "@vercel/node" },
+    { "src": "paystack-verify.js", "use": "@vercel/node" },
+    { "src": "sms.js", "use": "@vercel/node" },
+    { "src": "index.html", "use": "@vercel/static" },
+    { "src": "config.js", "use": "@vercel/static" },
+    { "src": "logo.png", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/api/db", "dest": "/db.js" },
+    { "src": "/api/health", "dest": "/health.js" },
+    { "src": "/api/paystack-init", "dest": "/paystack-init.js" },
+    { "src": "/api/paystack-verify", "dest": "/paystack-verify.js" },
+    { "src": "/api/sms", "dest": "/sms.js" },
+    { "handle": "filesystem" },
+    { "src": "/", "dest": "/index.html" }
+  ]
 }
