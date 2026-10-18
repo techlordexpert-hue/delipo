@@ -17,6 +17,7 @@ export default async function handler(req, res) {
   }
   res.json({
     functions: true,
+    version: 'v13',
     dbConfigured: !!(url && token),
     database: reachable,
     dbError,

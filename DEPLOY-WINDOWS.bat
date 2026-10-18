@@ -14,6 +14,6 @@ echo  When asked: Set up and deploy? = Y.  Link to existing project? = Y.  Proje
 echo.
 call npx --yes vercel@latest --prod
 echo.
-echo  If you see "Production:" with a web address above, it worked. Open that address and look for "Delipo v10" at the bottom of the login screen.
+echo  If you see "Production:" with a web address above, it worked. Open that address and look for "Delipo v13" at the bottom of the login screen.
 echo  If you see a red error, copy all the text above and send it to your developer.
 pause
